@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cell{
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-flex;
+    justify-content: center;
+    
+    width: 80px;
+    height: 80px;
+    border: #3d3d3d 1px solid;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: start;
+}
+    </style>
+</head>
+<body>
+    <img class="cell" src="https://static.vecteezy.com/ti/vetor-gratis/p3/29202543-silhueta-do-uma-arvore-sem-folhas-icone-ou-pictograma-ilustracao-ilustracao-vetor.jpg" draggable="true" ondragstart="drag(this)">
+    <img class="cell" src="https://static.vecteezy.com/ti/vetor-gratis/p1/15223714-icone-da-arvore-estilo-cartoon-vetor.jpg" draggable="true" ondragstart="drag(this)">
+    <br>
+    
+    <script>
+for(var i=0;i<10;i++){
+    document.write('<img class="cell" id="nullcell" ondragover="drophover(this)" src="">')
+}
+
+
+        EmptyCell = null;
+ImgCell = null;
+function drophover(Cell) {
+  EmptyCell=Cell
+   EmptyCell.src=ImgCell.src
+  }
+  
+  function drag(Img) {
+    ImgCell=Img
+  }
+    </script>
+
+</body>
+</html>
